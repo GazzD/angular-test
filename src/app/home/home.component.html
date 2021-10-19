@@ -1,0 +1,12 @@
+<h1>This is the home component</h1>
+
+<app-header></app-header>
+<p>{{ name + ' ' + lastName}}</p>
+
+
+<input type="text" placeholder="Introduce your name" [value]="name" (keyup)="updateName($event)" />
+<input type="text" placeholder="Introduce your last name" [(ngModel)]="lastName" />
+<button [disabled]="isDisabled" (click)="printWelcome()">Submit</button>
+<button (click)="toggleSubmitBtn()">Toggle submit btn</button>
+
+<app-footer></app-footer>
