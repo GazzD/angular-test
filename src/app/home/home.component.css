@@ -6,3 +6,17 @@ h1{
 p {
     color: olive;
 }
+
+.odd {
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.pair {
+    background-color: crimson;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
