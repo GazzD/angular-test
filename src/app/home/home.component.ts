@@ -55,6 +55,7 @@ export class HomeComponent {
 
     addItem(): void {
         if (this.itemName !== '') {
+          // this.shoppingList.push(this.itemName);
             this.shoppingList.push(new ShoppingItem(this.itemName, 10));
         }
     }
