@@ -1,0 +1,40 @@
+<h1>Super TEAM DB</h1>
+<input type="text" [(ngModel)]="fanName">
+<input type="number" [(ngModel)]="fanAge">
+<input type="text" [(ngModel)]="fanCountry">
+<select [(ngModel)]="selectedTeam">
+  <option value="madrid">Madrid FC</option>
+  <option value="barcelona">Barça FC</option>
+</select>
+
+<button (click)="addNewFan()">Add</button>
+
+<div class="container">
+  <div class="team">
+    <h3>Real Madrid FC</h3>
+    <button (click)="addRandomFan('madrid')">Add Random Fan</button>
+    <app-fan-item *ngFor="let madridFan of madridFanList; let i = index" [fan]="madridFan" (fanRemoved)="removeFan($event, 'madrid')"></app-fan-item>
+
+    <!-- <div *ngFor="let madridFan of madridFanList; let i = index">
+      <img [src]="madridFan.profileUrl" style="max-width:300px;">
+      <p>{{ madridFan.name }}</p>
+      <p>{{ madridFan.age }}</p>
+      <p>{{ madridFan.country }}</p>
+      <button (click)="removeFan(i, 'madrid')">Remove</button>
+    </div> -->
+
+  </div>
+  <div class="team">
+    <h3>Barcelona FC</h3>
+    <button (click)="addRandomFan('barcelona')">Add Random Fan</button>
+    <app-fan-item *ngFor="let barcelonaFan of barcelonaFanList; let i = index" [fan]="barcelonaFan" (fanRemoved)="removeFan($event, 'barcelona')"></app-fan-item>
+
+    <!-- <div *ngFor="let barcelonaFan of barcelonaFanList; let i = index">
+      <img [src]="barcelonaFan.profileUrl" style="max-width:300px;">
+      <p>{{ barcelonaFan.name }}</p>
+      <p>{{ barcelonaFan.age }}</p>
+      <p>{{ barcelonaFan.country }}</p>
+      <button (click)="removeFan(i, 'barcelona')">Remove</button>
+    </div> -->
+  </div>
+</div>

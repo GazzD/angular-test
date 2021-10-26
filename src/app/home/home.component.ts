@@ -17,6 +17,7 @@ export class HomeComponent {
     itemName: string;
     shoppingList: Array<ShoppingItem>;
 
+
     constructor() {
         this.name = '';
         this.lastName = '';
@@ -56,8 +57,18 @@ export class HomeComponent {
     addItem(): void {
         if (this.itemName !== '') {
           // this.shoppingList.push(this.itemName);
-            this.shoppingList.push(new ShoppingItem(this.itemName, 10));
+          this.shoppingList.push(new ShoppingItem(this.itemName, 10));
+
+          // new code
+          this.itemName = '';
         }
+    }
+
+    // new code
+    checkPressedKey(event: KeyboardEvent): void {
+      if (event.key === 'Enter') {
+        this.addItem();
+      }
     }
 
 }
