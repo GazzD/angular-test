@@ -13,7 +13,7 @@
   <div class="team">
     <h3>Real Madrid FC</h3>
     <button (click)="addRandomFan('madrid')">Add Random Fan</button>
-    <app-fan-item *ngFor="let madridFan of madridFanList; let i = index" [fan]="madridFan" (fanRemoved)="removeFan($event, 'madrid')"></app-fan-item>
+    <app-fan-item *ngFor="let madridFan of madridFanList; let i = index" [index]="i" [fan]="madridFan" (fanRemoved)="removeFan($event, 'madrid')"></app-fan-item>
 
     <!-- <div *ngFor="let madridFan of madridFanList; let i = index">
       <img [src]="madridFan.profileUrl" style="max-width:300px;">
@@ -27,7 +27,7 @@
   <div class="team">
     <h3>Barcelona FC</h3>
     <button (click)="addRandomFan('barcelona')">Add Random Fan</button>
-    <app-fan-item *ngFor="let barcelonaFan of barcelonaFanList; let i = index" [fan]="barcelonaFan" (fanRemoved)="removeFan($event, 'barcelona')"></app-fan-item>
+    <app-fan-item *ngFor="let barcelonaFan of barcelonaFanList; let i = index" [index]="i" [fan]="barcelonaFan" (fanRemoved)="removeFan($event, 'barcelona')"></app-fan-item>
 
     <!-- <div *ngFor="let barcelonaFan of barcelonaFanList; let i = index">
       <img [src]="barcelonaFan.profileUrl" style="max-width:300px;">
