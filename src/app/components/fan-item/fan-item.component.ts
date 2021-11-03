@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Fan } from '../models/fan.model';
+import { Fan } from '../../models/fan.model';
 
 @Component({
   selector: 'app-fan-item',

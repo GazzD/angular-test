@@ -1,7 +1,7 @@
 <h1>Super TEAM DB</h1>
-<input type="text" [(ngModel)]="fanName">
-<input type="number" [(ngModel)]="fanAge">
-<input type="text" [(ngModel)]="fanCountry">
+<input type="text" [(ngModel)]="fanName" (keydown.enter)="addNewFan()">
+<input type="number" [(ngModel)]="fanAge" (keydown.enter)="addNewFan()">
+<input type="text" [(ngModel)]="fanCountry" (keydown.enter)="addNewFan()">
 <select [(ngModel)]="selectedTeam">
   <option value="madrid">Madrid FC</option>
   <option value="barcelona">Barça FC</option>

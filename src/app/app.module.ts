@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { TeamListComponent } from './team-list/team-list.component';
-import { FanItemComponent } from './fan-item/fan-item.component';
+import { TeamListComponent } from './components/fan-list/team-list.component';
+import { FanItemComponent } from './components/fan-item/fan-item.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PostListComponent } from './components/post-list/post-list.component';
+import { PostListItemComponent } from './components/post-list-item/post-list-item.component';
+import { PostDetailComponent } from './components/post-detail/post-detail.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     TeamListComponent,
-    FanItemComponent
+    FanItemComponent,
+    PostListComponent,
+    PostListItemComponent,
+    PostDetailComponent,
+    PageNotFoundComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,

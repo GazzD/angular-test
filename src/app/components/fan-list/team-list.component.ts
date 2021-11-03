@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Fan } from '../models/fan.model';
-import { RandomUserResponse } from '../models/random-user.model';
-import { RandomUserService } from '../services/random-user.service';
+import { Fan } from '../../models/fan.model';
+import { RandomUserResponse } from '../../models/random-user.model';
+import { RandomUserService } from '../../services/random-user.service';
 
 @Component({
   selector: 'app-team-list',

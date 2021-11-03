@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ShoppingItem } from "../models/shopping-item.model";
+import { ShoppingItem } from "../../models/shopping-item.model";
 
 @Component({
     selector: 'app-home',
