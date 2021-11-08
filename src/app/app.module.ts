@@ -18,6 +18,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 import { TemplateDrivenAltComponent } from './components/template-driven-alt/template-driven-alt.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +44,10 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

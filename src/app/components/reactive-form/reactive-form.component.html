@@ -1,10 +1,23 @@
 <div>
   <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
-    <div>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput formControlName="name" placeholder="Name...">
+      <mat-error *ngIf="name.hasError('invalidName')">
+        Please enter a valid name
+      </mat-error>
+      <mat-error *ngIf="name.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+
+    <!-- <div>
       <input type="text" placeholder="Name..." formControlName="name">
       <p class="error-msg" *ngIf="name.invalid && (name.touched || name.dirty)">Name is required</p>
       <p class="error-msg" *ngIf="name.hasError('invalidName') && (name.touched || name.dirty)">Wrong name</p>
-    </div>
+    </div> -->
     <div>
       <input type="text" placeholder="Email..." formControlName="email">
       <p class="error-msg" *ngIf="email.invalid && (email.touched || email.dirty)">Please enter a valid email address</p>
@@ -29,7 +42,7 @@
       <p class="error-msg" *ngIf="career.invalid && (career.touched || career.dirty)">Select a valid career</p>
     </div>
 
-    <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+    <button mat-stroked-button color="primary" type="submit" [disabled]="registerForm.invalid">Submit</button>
 
   </form>
 </div>
