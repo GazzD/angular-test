@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TeamListComponent } from './components/fan-list/team-list.component';
 import { FanItemComponent } from './components/fan-item/fan-item.component';
 
@@ -16,6 +16,8 @@ import { PostListItemComponent } from './components/post-list-item/post-list-ite
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
+import { TemplateDrivenAltComponent } from './components/template-driven-alt/template-driven-alt.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,16 @@ import { TemplateDrivenFormComponent } from './components/template-driven-form/t
     PostListItemComponent,
     PostDetailComponent,
     PageNotFoundComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    TemplateDrivenAltComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

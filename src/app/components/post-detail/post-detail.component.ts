@@ -28,6 +28,8 @@ export class PostDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const postId: number = this.activatedRoute.snapshot.params['postId'];
+    const postId2: number = this.activatedRoute.snapshot.queryParams['xxx'];
+    console.log(postId2)
 
     this.jsonPlaceHolderService.getPostById(postId).subscribe(
       result => {
